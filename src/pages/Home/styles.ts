@@ -14,6 +14,8 @@ export const HomeLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  gap: 66px;
 `
 
 export const TitleContainer = styled.section`
@@ -33,4 +35,12 @@ export const Title = styled.h1`
 export const Subtitle = styled.p`
   font-size: 1.25rem;
   color: ${({ theme }) => theme.subtitle};
+`
+
+export const Items = styled.section`
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
 `
