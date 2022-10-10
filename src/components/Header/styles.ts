@@ -7,7 +7,10 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  padding: 32px 160px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 2rem 1.25rem;
 
   nav {
     display: flex;
@@ -32,7 +35,7 @@ export const Location = styled(baseNavbarItems)`
 
   span {
     color: ${({ theme }) => theme.purple.dark};
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 `
 
@@ -56,7 +59,7 @@ export const Cart = styled(baseNavbarItems)`
 
     background: ${({ theme }) => theme.yellow.dark};
     color: ${({ theme }) => theme.white};
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
   }
 `
