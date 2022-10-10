@@ -32,6 +32,7 @@ export const Location = styled(baseNavbarItems)`
 
   span {
     color: ${({ theme }) => theme.purple.dark};
+    font-size: 14px;
   }
 `
 
@@ -55,6 +56,7 @@ export const Cart = styled(baseNavbarItems)`
 
     background: ${({ theme }) => theme.yellow.dark};
     color: ${({ theme }) => theme.white};
+    font-size: 12px;
     font-weight: bold;
   }
 `
