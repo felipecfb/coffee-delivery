@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 export const defaultTheme = {
   white: '#FFFFFF',
   background: '#FAFAFA',
@@ -20,6 +19,6 @@ export const defaultTheme = {
   yellow: {
     default: '#DBAC2C',
     dark: '#C47F17',
-    light: '#EBE5F9',
+    light: '#F1E9C9',
   },
 }
