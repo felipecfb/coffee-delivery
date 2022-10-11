@@ -6,6 +6,13 @@ interface ItemProps {
 
 export const IntroContainer = styled.div`
   display: flex;
+  align-items: flex-start;
+
+  gap: 66px;
+`
+
+export const InfoContainer = styled.div`
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
 
