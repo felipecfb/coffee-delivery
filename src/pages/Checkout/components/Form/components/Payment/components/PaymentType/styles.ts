@@ -8,6 +8,11 @@ export const PaymentTypeContainer = styled.button`
   gap: 0.75rem;
 
   width: 100%;
+
+  background-color: ${({ theme }) => theme.button};
+  border: none;
+
+  cursor: pointer;
 `
 
 export const PaymentTypeTitle = styled.p`

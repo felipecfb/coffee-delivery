@@ -1,6 +1,7 @@
 import { Header } from '../../components/Header'
 import { Form } from './components/Form'
-import { CheckoutContainer, CompleteOrder, SelectedCoffees } from './styles'
+import { OrderDetails } from './components/OrderDetails'
+import { CheckoutContainer } from './styles'
 
 export function Checkout() {
   return (
@@ -8,9 +9,7 @@ export function Checkout() {
       <Header />
       <CheckoutContainer>
         <Form />
-        <SelectedCoffees>
-          <h1>Cafés selecionados</h1>
-        </SelectedCoffees>
+        <OrderDetails />
       </CheckoutContainer>
     </>
   )

@@ -9,7 +9,3 @@ export const CheckoutContainer = styled.main`
   justify-content: space-between;
   align-items: center;
 `
-
-export const CompleteOrder = styled.section``
-
-export const SelectedCoffees = styled.section``
