@@ -17,3 +17,11 @@ export const Title = styled.h1`
 
   margin-bottom: 54px;
 `
+
+export const CoffeesListContainer = styled.section`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem 2rem;
+
+  width: 100%;
+`

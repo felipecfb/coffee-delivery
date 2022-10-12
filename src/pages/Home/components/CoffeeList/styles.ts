@@ -1,13 +1,5 @@
 import styled from 'styled-components'
 
-export const CoffeeCardContainer = styled.section`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem 2rem;
-
-  width: 100%;
-`
-
 export const CoffeeCard = styled.div`
   background: ${({ theme }) => theme.card};
 

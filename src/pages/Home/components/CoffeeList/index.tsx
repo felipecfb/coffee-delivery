@@ -1,5 +1,7 @@
+import { useTheme } from 'styled-components'
+import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+
 import {
-  CoffeeCardContainer,
   CoffeeCard,
   CoffeeImage,
   CoffeeTagWrapper,
@@ -16,239 +18,54 @@ import {
   Counter,
 } from './styles'
 
-import expressoTradicional from '../../../../assets/coffee/Expresso.png'
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
-import { useTheme } from 'styled-components'
+interface Coffee {
+  id: number
+  name: string
+  tags: string[]
+  description: string
+  price: number
+  image: string
+}
 
-export function CoffeeList() {
+interface CoffeeProps {
+  coffee: Coffee
+}
+
+export function CoffeeList({ coffee }: CoffeeProps) {
   const theme = useTheme()
 
   return (
-    <CoffeeCardContainer>
-      <CoffeeCard>
-        <CoffeeImage src={expressoTradicional} alt="" />
-        <CoffeeTagWrapper>
-          <CoffeeTag>Tradicional</CoffeeTag>
-        </CoffeeTagWrapper>
+    <CoffeeCard>
+      <CoffeeImage src={`/coffee/${coffee.image}`} alt="" />
+      <CoffeeTagWrapper>
+        {coffee.tags.map((tag) => (
+          <CoffeeTag key={tag}>{tag}</CoffeeTag>
+        ))}
+      </CoffeeTagWrapper>
 
-        <CoffeeName>Expresso Tradicional</CoffeeName>
-        <CoffeeDescription>
-          O tradicional café feito com água quente e grãos moídos
-        </CoffeeDescription>
+      <CoffeeName>{coffee.name}</CoffeeName>
+      <CoffeeDescription>{coffee.description}</CoffeeDescription>
 
-        <CoffeeFooter>
-          <CoffeePrice>
-            <CoffeePriceCoin>R$</CoffeePriceCoin>
-            9,90
-          </CoffeePrice>
-          <CounterWrapper>
-            <Counter>
-              <CounterButton>
-                <Minus size={14} color={theme.purple.default} />
-              </CounterButton>
-              <CounterQuantity>1</CounterQuantity>
-              <CounterButton>
-                <Plus size={14} color={theme.purple.default} />
-              </CounterButton>
-            </Counter>
-            <AddToCart>
-              <ShoppingCart color={theme.white} />
-            </AddToCart>
-          </CounterWrapper>
-        </CoffeeFooter>
-      </CoffeeCard>
-      <CoffeeCard>
-        <CoffeeImage src={expressoTradicional} alt="" />
-        <CoffeeTagWrapper>
-          <CoffeeTag>Tradicional</CoffeeTag>
-        </CoffeeTagWrapper>
-
-        <CoffeeName>Expresso Tradicional</CoffeeName>
-        <CoffeeDescription>
-          O tradicional café feito com água quente e grãos moídos
-        </CoffeeDescription>
-
-        <CoffeeFooter>
-          <CoffeePrice>
-            <CoffeePriceCoin>R$</CoffeePriceCoin>
-            9,90
-          </CoffeePrice>
-          <CounterWrapper>
-            <Counter>
-              <CounterButton>
-                <Minus size={14} color={theme.purple.default} />
-              </CounterButton>
-              <CounterQuantity>1</CounterQuantity>
-              <CounterButton>
-                <Plus size={14} color={theme.purple.default} />
-              </CounterButton>
-            </Counter>
-            <AddToCart>
-              <ShoppingCart color={theme.white} />
-            </AddToCart>
-          </CounterWrapper>
-        </CoffeeFooter>
-      </CoffeeCard>
-      <CoffeeCard>
-        <CoffeeImage src={expressoTradicional} alt="" />
-        <CoffeeTagWrapper>
-          <CoffeeTag>Tradicional</CoffeeTag>
-        </CoffeeTagWrapper>
-
-        <CoffeeName>Expresso Tradicional</CoffeeName>
-        <CoffeeDescription>
-          O tradicional café feito com água quente e grãos moídos
-        </CoffeeDescription>
-
-        <CoffeeFooter>
-          <CoffeePrice>
-            <CoffeePriceCoin>R$</CoffeePriceCoin>
-            9,90
-          </CoffeePrice>
-          <CounterWrapper>
-            <Counter>
-              <CounterButton>
-                <Minus size={14} color={theme.purple.default} />
-              </CounterButton>
-              <CounterQuantity>1</CounterQuantity>
-              <CounterButton>
-                <Plus size={14} color={theme.purple.default} />
-              </CounterButton>
-            </Counter>
-            <AddToCart>
-              <ShoppingCart color={theme.white} />
-            </AddToCart>
-          </CounterWrapper>
-        </CoffeeFooter>
-      </CoffeeCard>
-      <CoffeeCard>
-        <CoffeeImage src={expressoTradicional} alt="" />
-        <CoffeeTagWrapper>
-          <CoffeeTag>Tradicional</CoffeeTag>
-        </CoffeeTagWrapper>
-
-        <CoffeeName>Expresso Tradicional</CoffeeName>
-        <CoffeeDescription>
-          O tradicional café feito com água quente e grãos moídos
-        </CoffeeDescription>
-
-        <CoffeeFooter>
-          <CoffeePrice>
-            <CoffeePriceCoin>R$</CoffeePriceCoin>
-            9,90
-          </CoffeePrice>
-          <CounterWrapper>
-            <Counter>
-              <CounterButton>
-                <Minus size={14} color={theme.purple.default} />
-              </CounterButton>
-              <CounterQuantity>1</CounterQuantity>
-              <CounterButton>
-                <Plus size={14} color={theme.purple.default} />
-              </CounterButton>
-            </Counter>
-            <AddToCart>
-              <ShoppingCart color={theme.white} />
-            </AddToCart>
-          </CounterWrapper>
-        </CoffeeFooter>
-      </CoffeeCard>
-      <CoffeeCard>
-        <CoffeeImage src={expressoTradicional} alt="" />
-        <CoffeeTagWrapper>
-          <CoffeeTag>Tradicional</CoffeeTag>
-        </CoffeeTagWrapper>
-
-        <CoffeeName>Expresso Tradicional</CoffeeName>
-        <CoffeeDescription>
-          O tradicional café feito com água quente e grãos moídos
-        </CoffeeDescription>
-
-        <CoffeeFooter>
-          <CoffeePrice>
-            <CoffeePriceCoin>R$</CoffeePriceCoin>
-            9,90
-          </CoffeePrice>
-          <CounterWrapper>
-            <Counter>
-              <CounterButton>
-                <Minus size={14} color={theme.purple.default} />
-              </CounterButton>
-              <CounterQuantity>1</CounterQuantity>
-              <CounterButton>
-                <Plus size={14} color={theme.purple.default} />
-              </CounterButton>
-            </Counter>
-            <AddToCart>
-              <ShoppingCart color={theme.white} />
-            </AddToCart>
-          </CounterWrapper>
-        </CoffeeFooter>
-      </CoffeeCard>
-      <CoffeeCard>
-        <CoffeeImage src={expressoTradicional} alt="" />
-        <CoffeeTagWrapper>
-          <CoffeeTag>Tradicional</CoffeeTag>
-        </CoffeeTagWrapper>
-
-        <CoffeeName>Expresso Tradicional</CoffeeName>
-        <CoffeeDescription>
-          O tradicional café feito com água quente e grãos moídos
-        </CoffeeDescription>
-
-        <CoffeeFooter>
-          <CoffeePrice>
-            <CoffeePriceCoin>R$</CoffeePriceCoin>
-            9,90
-          </CoffeePrice>
-          <CounterWrapper>
-            <Counter>
-              <CounterButton>
-                <Minus size={14} color={theme.purple.default} />
-              </CounterButton>
-              <CounterQuantity>1</CounterQuantity>
-              <CounterButton>
-                <Plus size={14} color={theme.purple.default} />
-              </CounterButton>
-            </Counter>
-            <AddToCart>
-              <ShoppingCart color={theme.white} />
-            </AddToCart>
-          </CounterWrapper>
-        </CoffeeFooter>
-      </CoffeeCard>
-      <CoffeeCard>
-        <CoffeeImage src={expressoTradicional} alt="" />
-        <CoffeeTagWrapper>
-          <CoffeeTag>Tradicional</CoffeeTag>
-        </CoffeeTagWrapper>
-
-        <CoffeeName>Expresso Tradicional</CoffeeName>
-        <CoffeeDescription>
-          O tradicional café feito com água quente e grãos moídos
-        </CoffeeDescription>
-
-        <CoffeeFooter>
-          <CoffeePrice>
-            <CoffeePriceCoin>R$</CoffeePriceCoin>
-            9,90
-          </CoffeePrice>
-          <CounterWrapper>
-            <Counter>
-              <CounterButton>
-                <Minus size={14} color={theme.purple.default} />
-              </CounterButton>
-              <CounterQuantity>1</CounterQuantity>
-              <CounterButton>
-                <Plus size={14} color={theme.purple.default} />
-              </CounterButton>
-            </Counter>
-            <AddToCart>
-              <ShoppingCart color={theme.white} />
-            </AddToCart>
-          </CounterWrapper>
-        </CoffeeFooter>
-      </CoffeeCard>
-    </CoffeeCardContainer>
+      <CoffeeFooter>
+        <CoffeePrice>
+          <CoffeePriceCoin>R$</CoffeePriceCoin>
+          {String(coffee.price).padEnd(4, '0')}
+        </CoffeePrice>
+        <CounterWrapper>
+          <Counter>
+            <CounterButton>
+              <Minus size={14} color={theme.purple.default} />
+            </CounterButton>
+            <CounterQuantity>1</CounterQuantity>
+            <CounterButton>
+              <Plus size={14} color={theme.purple.default} />
+            </CounterButton>
+          </Counter>
+          <AddToCart>
+            <ShoppingCart color={theme.white} />
+          </AddToCart>
+        </CounterWrapper>
+      </CoffeeFooter>
+    </CoffeeCard>
   )
 }

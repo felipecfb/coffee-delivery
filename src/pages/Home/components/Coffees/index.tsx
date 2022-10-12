@@ -1,11 +1,17 @@
 import { CoffeeList } from '../CoffeeList'
-import { CoffeesContainer, Title } from './styles'
+import { CoffeesContainer, CoffeesListContainer, Title } from './styles'
+
+import coffeeAPI from '../../../../services/coffee'
 
 export function Coffees() {
   return (
     <CoffeesContainer>
       <Title>Nossos cafés</Title>
-      <CoffeeList />
+      <CoffeesListContainer>
+        {coffeeAPI.map((coffee) => (
+          <CoffeeList coffee={coffee} key={coffee.id} />
+        ))}
+      </CoffeesListContainer>
     </CoffeesContainer>
   )
 }
