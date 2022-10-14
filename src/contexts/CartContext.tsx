@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useReducer, useState } from 'react'
+import { createContext, ReactNode, useState } from 'react'
 
 interface CartProviderProps {
   children: ReactNode
