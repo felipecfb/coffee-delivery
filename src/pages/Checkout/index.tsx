@@ -5,12 +5,9 @@ import { CheckoutContainer } from './styles'
 
 export function Checkout() {
   return (
-    <>
-      <Header />
-      <CheckoutContainer>
-        <Form />
-        <OrderDetails />
-      </CheckoutContainer>
-    </>
+    <CheckoutContainer>
+      <Form />
+      <OrderDetails />
+    </CheckoutContainer>
   )
 }

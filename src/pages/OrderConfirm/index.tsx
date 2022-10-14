@@ -18,43 +18,40 @@ export function OrderConfirm() {
   const theme = useTheme()
 
   return (
-    <>
-      <Header />
-      <OrderConfirmContainer>
-        <section>
-          <OrderConfirmMessage>
-            <Title>Uhu! Pedido confirmado</Title>
-            <Subtitle>
-              Agora é só aguardar que logo o café chegará até você
-            </Subtitle>
-          </OrderConfirmMessage>
+    <OrderConfirmContainer>
+      <section>
+        <OrderConfirmMessage>
+          <Title>Uhu! Pedido confirmado</Title>
+          <Subtitle>
+            Agora é só aguardar que logo o café chegará até você
+          </Subtitle>
+        </OrderConfirmMessage>
 
-          <OrderInfoContainer>
-            <OrderInfo
-              icon={<MapPin size={16} weight="fill" color={theme.white} />}
-              title="Entrega em Rua João Daniel Martinelli, 102"
-              subtitle="Farrapos - Porto Alegre, RS"
-              background={theme.purple.default}
-            />
-            <OrderInfo
-              icon={<Timer size={16} weight="fill" color={theme.white} />}
-              title="Previsão de entrega"
-              subtitle="20 min - 30 min"
-              background={theme.yellow.default}
-            />
-            <OrderInfo
-              icon={
-                <CurrencyDollar size={16} weight="fill" color={theme.white} />
-              }
-              title="Pagamento na entrega"
-              subtitle="Cartão de Crédito"
-              background={theme.yellow.dark}
-            />
-          </OrderInfoContainer>
-        </section>
+        <OrderInfoContainer>
+          <OrderInfo
+            icon={<MapPin size={16} weight="fill" color={theme.white} />}
+            title="Entrega em Rua João Daniel Martinelli, 102"
+            subtitle="Farrapos - Porto Alegre, RS"
+            background={theme.purple.default}
+          />
+          <OrderInfo
+            icon={<Timer size={16} weight="fill" color={theme.white} />}
+            title="Previsão de entrega"
+            subtitle="20 min - 30 min"
+            background={theme.yellow.default}
+          />
+          <OrderInfo
+            icon={
+              <CurrencyDollar size={16} weight="fill" color={theme.white} />
+            }
+            title="Pagamento na entrega"
+            subtitle="Cartão de Crédito"
+            background={theme.yellow.dark}
+          />
+        </OrderInfoContainer>
+      </section>
 
-        <HeroImage src={HeroImageSrc} />
-      </OrderConfirmContainer>
-    </>
+      <HeroImage src={HeroImageSrc} />
+    </OrderConfirmContainer>
   )
 }

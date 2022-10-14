@@ -6,12 +6,9 @@ import { HomeContainer } from './styles'
 
 export function Home() {
   return (
-    <>
-      <Header />
-      <HomeContainer>
-        <Intro />
-        <Coffees />
-      </HomeContainer>
-    </>
+    <HomeContainer>
+      <Intro />
+      <Coffees />
+    </HomeContainer>
   )
 }
