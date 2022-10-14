@@ -1,15 +1,13 @@
 import { ThemeProvider } from 'styled-components'
 import { Header } from './components/Header'
-import { Checkout } from './pages/Checkout'
-import { Home } from './pages/Home'
-import { OrderConfirm } from './pages/OrderConfirm'
+import { Router } from './routes/index.routes'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <OrderConfirm />
+      <Router />
       <GlobalStyle />
     </ThemeProvider>
   )
