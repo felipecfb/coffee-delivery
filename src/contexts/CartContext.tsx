@@ -7,7 +7,5 @@ interface CartProviderProps {
 export const CartContext = createContext({})
 
 export function CartProvider({ children }: CartProviderProps) {
-  const [cart, useCart] = useState()
-
   return <CartContext.Provider value={{}}>{children}</CartContext.Provider>
 }

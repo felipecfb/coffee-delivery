@@ -7,7 +7,6 @@ import {
   OrderInfoContainer,
 } from './styles'
 
-import { Header } from '../../components/Header'
 import { OrderInfo } from './components/OrderInfo'
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
 import { useTheme } from 'styled-components'

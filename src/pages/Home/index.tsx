@@ -1,4 +1,3 @@
-import { Header } from '../../components/Header'
 import { Coffees } from './components/Coffees'
 import { Intro } from './components/Intro'
 
