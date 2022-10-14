@@ -9,7 +9,7 @@ import {
 
 import { Header } from '../../components/Header'
 import { OrderInfo } from './components/OrderInfo'
-import { MapPin } from 'phosphor-react'
+import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
 import { useTheme } from 'styled-components'
 
 import HeroImageSrc from '../../assets/bannerSucess.svg'
@@ -37,16 +37,18 @@ export function OrderConfirm() {
               background={theme.purple.default}
             />
             <OrderInfo
-              icon={<MapPin size={16} weight="fill" color={theme.white} />}
-              title="Entrega em Rua João Daniel Martinelli, 102"
-              subtitle="Farrapos - Porto Alegre, RS"
-              background={theme.purple.default}
+              icon={<Timer size={16} weight="fill" color={theme.white} />}
+              title="Previsão de entrega"
+              subtitle="20 min - 30 min"
+              background={theme.yellow.default}
             />
             <OrderInfo
-              icon={<MapPin size={16} weight="fill" color={theme.white} />}
-              title="Entrega em Rua João Daniel Martinelli, 102"
-              subtitle="Farrapos - Porto Alegre, RS"
-              background={theme.purple.default}
+              icon={
+                <CurrencyDollar size={16} weight="fill" color={theme.white} />
+              }
+              title="Pagamento na entrega"
+              subtitle="Cartão de Crédito"
+              background={theme.yellow.dark}
             />
           </OrderInfoContainer>
         </section>

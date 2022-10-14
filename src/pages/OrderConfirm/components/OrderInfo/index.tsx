@@ -25,7 +25,9 @@ export function OrderInfo({
       <IconWrapper background={background}>{icon}</IconWrapper>
       <Content>
         <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
+        <Subtitle>
+          <strong>{subtitle}</strong>
+        </Subtitle>
       </Content>
     </OrderInfoContainer>
   )
